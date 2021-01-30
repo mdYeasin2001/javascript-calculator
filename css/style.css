@@ -1,0 +1,23 @@
+.calculator{
+    width: 300px;
+    height: 400px;
+    background: whitesmoke;
+    margin: 50px auto 0px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.output-area{
+    margin-bottom: 10px;
+}
+.calculator-key{
+    width: 66px;
+    color: #fff;
+    font-size: 20px;
+}
+.last-line input{
+    width: 136px;
+}
+.line{
+    margin-bottom: 10px;
+}

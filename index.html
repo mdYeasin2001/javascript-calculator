@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 class="text-center">Simple javaScript Calculator</h1>
+    <section class="calculator">
+        <form action="">
+            <div class="output-area">
+                <input id="show-result" class="form-control text-end" type="text" value="" placeholder="0">
+            </div>
+            <div class="button-area">
+                <div class="line">
+                    <input onclick="getNumber(7)" type="button" value="7" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber(8)" type="button" value="8" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber(9)" type="button" value="9" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber('+')" type="button" value="+" class="btn btn-warning calculator-key">
+                </div>
+                <div class="line">
+                    <input onclick="getNumber(4)" type="button" value="4" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber(5)" type="button" value="5" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber(6)" type="button" value="6" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber('-')" type="button" value="-" class="btn btn-warning calculator-key">
+                </div>
+                <div class="line">
+                    <input onclick="getNumber(1)" type="button" value="1" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber(2)" type="button" value="2" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber(3)" type="button" value="3" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber('*')" type="button" value="*" class="btn btn-warning calculator-key">
+                </div>
+                <div class="line">
+                    <input onclick="getNumber('00')" type="button" value="00" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber(0)" type="button" value="0" class="btn btn-primary calculator-key">
+                    <input onclick="getNumber('.')" type="button" value="." class="btn btn-primary calculator-key">
+                    <input onclick="getNumber('/')" type="button" value="/" class="btn btn-warning calculator-key">
+                </div>
+                <div class="last-line">
+                    <input onclick="clearInputBox()" type="button" value="C" class="btn btn-warning calculator-key">
+                    <input onclick="calculate()" type="button" value="=" class="btn btn-warning calculator-key">
+                </div>
+            </div>
+        </form>
+    </section>
+
+
+    <script>
+        function getNumber(valueOfClickedBtn){
+            const inputValue = document.getElementById('show-result');
+            const currentNumber = inputValue.value + valueOfClickedBtn;
+            inputValue.value = currentNumber;
+        }
+
+        function calculate(){
+            const inputValue = document.getElementById('show-result');
+            const result = eval(inputValue.value);
+            inputValue.value = result;
+        }
+
+        function clearInputBox(){
+            document.getElementById('show-result').value = "";
+        }
+        
+
+        
+        
+    </script>
+</body>
+
+</html>
